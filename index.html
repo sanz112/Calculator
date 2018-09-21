@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="a" class="form-control" />
+    <input type="text" id="b">
+</form>
+    <button onClick="mathDiff()" type="submit"> Submit</button>
+    <p id="demo"></p><br>
+    
+    <form>
+            <input type="text" id="e" class="form-control" />
+            <input type="text" id="g">
+        </form>
+        <button onClick="mathInt()" type="submit"> Submit</button>
+        <p id="demo1"></p>
+    <script>
+        function mathDiff() {
+            //alert("hello");
+            var ab = parseFloat(document.getElementById("a").value);
+            var bi = parseFloat(document.getElementById("b").value);
+            var k = bi * ab;
+            var j = k+"x"+"<sup>"+ bi + "</sup>";
+            document.getElementById("demo").innerHTML = j;
+        }
+        function mathInt() {
+            //alert("hello");
+            var a = parseFloat(document.getElementById("e").value);
+            var b = parseFloat(document.getElementById("g").value);
+            var d = b+1;
+            var h =  a/d;
+            var y =  h + "x" + "<sup>"+ d + "</sup>";
+            //var z = y + "/" + d;
+            document.getElementById("demo1").innerHTML = y;
+        }
+        </script>
+</body>
+</html>
